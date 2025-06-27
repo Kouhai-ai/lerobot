@@ -70,6 +70,7 @@ from lerobot.common.teleoperators import (  # noqa: F401
     so100_leader,
     so101_leader,
 )
+from tests.mocks.mock_teleop import MockTeleopConfig  # noqa: F401
 from lerobot.common.utils.control_utils import (
     init_keyboard_listener,
     is_headless,
@@ -86,6 +87,7 @@ from lerobot.common.utils.utils import (
 from lerobot.common.utils.visualization_utils import _init_rerun
 from lerobot.configs import parser
 from lerobot.configs.policies import PreTrainedConfig
+from lerobot.common.teleoperators.keyboard.configuration_keyboard import KeyboardTeleopConfig  # noqa: F401
 
 
 @dataclass

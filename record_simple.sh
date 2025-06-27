@@ -1,12 +1,13 @@
+#!/bin/bash
 python -m lerobot.record \
     --robot.type=so101_follower \
     --robot.port=/dev/tty.usbmodem58FA0962001 \
-    --robot.cameras="{laptop: {type: opencv, width: 640, height: 480, fps: 30, index_or_path: 0}}" \
     --robot.id=blue \
     --teleop.type=keyboard \
     --teleop.id=my_keyboard \
-    --dataset.repo_id=test_user/manual_cube_grab_dataset \
+    --dataset.repo_id=test_user/simple_test \
     --dataset.root=./local_datasets \
     --dataset.push_to_hub=false \
-    --dataset.num_episodes=2 \
-    --dataset.single_task="Grab the cube" \
+    --dataset.num_episodes=1 \
+    --dataset.episode_time_s=10 \
+    --dataset.single_task="Simple test" 
